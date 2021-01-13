@@ -1,0 +1,5 @@
+<!--miniprogram/pages/basicComponent/main/main.wxml-->
+
+  <text class="title">{{title}}</text>
+
+

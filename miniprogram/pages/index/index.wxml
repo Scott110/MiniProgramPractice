@@ -1,14 +1,9 @@
 <!--index.wxml-->
-<view class="container">
 
-   <view>{{key}}</view>
+<button bind:tap="go2ComponetMain" type="primary">{{funcationName_BasiceComponent}}</button>
 
-  <view class="uploader">
-    <view wx:for="{{iconType}}">
-      <icon type="{{item}}" size="100px"/>
-
-    </view>
-  </view>
-
-
-</view>
+<!-- 跳转
+<navigator url="../basicComponent/main/main" open-type="navigate" hover-class="navigator-hover">
+  <button type="primary"> {{funcationName_BasiceComponent}}</button>
+</navigator>
+-->

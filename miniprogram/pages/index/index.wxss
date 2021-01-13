@@ -61,7 +61,7 @@ page {
   flex: 1;
 }
 
-.uploader, .tunnel {
+.uploader, .tunnel,test-icon {
   height: auto;
   padding: 0 0 0 40rpx;
   flex-direction: column;

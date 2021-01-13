@@ -1,12 +1,14 @@
 {
   "pages": [
-    "pages/index/index"
+    "pages/index/index",
+    "pages/basicComponent/ticons/icon",
+    "pages/basicComponent/main/main"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#F6F6F6",
-    "navigationBarTitleText": "云开发 QuickStart",
+    "navigationBarTitleText": "微信小程序开发实践",
     "navigationBarTextStyle": "black"
   },
   "sitemapLocation": "sitemap.json",

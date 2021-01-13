@@ -1,0 +1,5 @@
+<!--miniprogram/pages/basicComponent/icon.wxml-->
+<text>miniprogram/pages/basicComponent/icon.wxml</text>
+<view wx:for="{{iconType}}" wx:for-index="ind" wx:key="ind">
+      <icon type="{{item}}" size="100px"/>
+    </view>
