@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+
+   <view>{{key}}</view>
+
+  <view class="uploader">
+    <view wx:for="{{iconType}}">
+      <icon type="{{item}}" size="100px"/>
+
+    </view>
+  </view>
+
+
+</view>
