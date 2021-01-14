@@ -1,13 +1,13 @@
-// miniprogram/pages/basicComponent/main/main.js
+// miniprogram/pages/basicComponent/icon.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-      title:'基础组件',
-      compont_icon_btn_str:'icon实例',
-      compont_progress_btn_str:'progress实例'
+    iconType:['search','warn'],
+    title:'icon实践'
+
   },
 
   /**
@@ -64,28 +64,5 @@ Page({
    */
   onShareAppMessage: function () {
 
-  },
-
-  /*
-  * 进入icon 测试页
-  */
-  go2ComponetIcon:function(){
-    console.log('点击进入icon页面')
-      wx.navigateTo({
-        url: '../icon1/icon',
-      })
-  },
-
-   /*
-  * 进入progress 测试页
-  */
- go2ComponetProgress:function(){
-  console.log('点击进入progress页面')
-    wx.navigateTo({
-      url: '../progress/progress',
-    })
-}
-
+  }
 })
-
-

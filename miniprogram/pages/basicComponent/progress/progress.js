@@ -1,13 +1,12 @@
-// miniprogram/pages/basicComponent/icon.js
+// miniprogram/pages/basicComponent/progress/progress.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    iconType:['success','search','warn'],
-    title:'icon实践'
-
+    title:'progress实践',
+    progressValue:40
   },
 
   /**
@@ -65,4 +64,49 @@ Page({
   onShareAppMessage: function () {
 
   }
+,
+
+  onProgressTap: function() {
+    this.setData({
+      progressValue:0
+    })
+  },
+
+  //动画完成事件
+  onProgressActiveEnd: function() {
+   console.log("progress 结束")
+  },
+
+
+  //重新设置进度条
+  onProgressReload: function() {
+    this.setData({
+      progressValue:0
+    })
+
+    this.setData({
+      progressValue:50
+    })
+  },
+
+  onProgressReload1: function() {
+    this.setData({
+      progressValue:0
+    })
+    //是否可用
+   if(wx.canIUse('nextTick')){
+      wx.nextTick(()=>{
+        this.setData({
+          progressValue:100
+        })
+      });
+    }else{
+      setTimeout(() => {
+        this.setData({
+          progressValue:100
+        })
+      }, 17);
+    }
+  },
+  
 })

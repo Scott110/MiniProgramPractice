@@ -1,0 +1,25 @@
+<!--miniprogram/pages/basicComponent/icon.wxml-->
+<text class="componettitle">{{title}}</text>
+
+<!--横向列表-->
+<view class="icon_list_Style">
+  <view class="view-item" wx:for="{{iconType}}" wx:for-index="ind" wx:key="ind">
+    <icon type="{{item}}" size="50px" />
+  </view>
+</view>
+
+<view>
+测试文本带icon<icon type="success_no_circle" size="80rpx" /> 我很好
+</view>
+
+<!--精灵图加载icon-->
+<view class="sprite_icon"></view>
+
+<!--使用字体库加载icon-->
+<view style="font-size:17px;">
+  文本文本文本<text class="iconfont iconsun"></text>文本文本文本文本文本文本文本文本文本文本<text class="iconfont icon-sun"></text>
+</view>
+
+<label>svg icon</label>
+<!--使用svg加载icon-->
+<icon class="svg_icon"></icon>

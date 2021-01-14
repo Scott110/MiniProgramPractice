@@ -2,4 +2,10 @@
 
   <text class="title">{{title}}</text>
 
+<view class="containerStyle">
+  <button class="btnStyle" size="mini" bind:tap="go2ComponetIcon" type="primary">{{compont_icon_btn_str}}</button>
+  <button class="btnStyle" style="width:30%" bind:tap="go2ComponetProgress" type="primary">{{compont_progress_btn_str}}</button>
+</view>
+
+
 

@@ -10,3 +10,15 @@
  font-weight: 500;
  font-size: larger;
 }
+
+.containerStyle {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.btnStyle {
+ font-size: small;
+ text-align: center;
+}
