@@ -1,1 +1,9 @@
 /* miniprogram/pages/basicComponent/progress/progress.wxss */
+
+/*
+* 修改进度条后面文本颜色和间隔
+*/
+.wx-progress-info{
+  color: red;
+  margin-left: 20px;
+}
