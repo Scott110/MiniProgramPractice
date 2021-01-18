@@ -1,0 +1,12 @@
+/* miniprogram/pages/basicComponent/richText/richText.wxss */
+.div_class{
+  color: red;
+}
+
+/*
+* 解决图片直接存在间隙的问题
+*/
+.img1{
+ font-size: '0';
+ display: block;
+}

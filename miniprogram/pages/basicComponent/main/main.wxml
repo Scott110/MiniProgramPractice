@@ -5,6 +5,7 @@
 <view class="containerStyle">
   <button class="btnStyle" size="mini" bind:tap="go2ComponetIcon" type="primary">{{compont_icon_btn_str}}</button>
   <button class="btnStyle" style="width:30%" bind:tap="go2ComponetProgress" type="primary">{{compont_progress_btn_str}}</button>
+  <button class="btnStyle" style="width:30%" bind:tap="go2ComponetRichText" type="primary">{{compont_rich_text_btn_str}}</button>
 </view>
 
 

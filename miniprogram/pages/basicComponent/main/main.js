@@ -7,7 +7,8 @@ Page({
   data: {
       title:'基础组件',
       compont_icon_btn_str:'icon实例',
-      compont_progress_btn_str:'progress实例'
+      compont_progress_btn_str:'progress实例',
+      compont_rich_text_btn_str:'富文本实例'
   },
 
   /**
@@ -83,6 +84,16 @@ Page({
   console.log('点击进入progress页面')
     wx.navigateTo({
       url: '../progress/progress',
+    })
+},
+
+  /*
+  * 进入富文本 测试页
+  */
+ go2ComponetRichText:function(){
+  console.log('点击进入富文本页面')
+    wx.navigateTo({
+      url: '../richText/richText',
     })
 }
 
