@@ -4,7 +4,9 @@
     "pages/basicComponent/icon1/icon",
     "pages/basicComponent/main/main",
     "pages/basicComponent/progress/progress",
-    "pages/basicComponent/richText/richText"
+    "pages/basicComponent/richText/richText",
+    "pages/basicComponent/_view/_view",
+    "pages/basicComponent/move_area/move_area"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

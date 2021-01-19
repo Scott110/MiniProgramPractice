@@ -1,0 +1,24 @@
+<!--miniprogram/pages/basicComponent/_view/_view.wxml-->
+<text class="componettitle">{{title}}</text>
+
+
+
+<!-- catchtap 不让事件向上传递
+hover-stop-propagation  点击子类父类 hover 不起作用
+-->
+<view  id="parent" hover-class="ph_class"  hover-stay-time="3000" bindtap="onBindTap">
+    父类
+    <view id="children"  hover-stop-propagation class="cv" hover-class="ch_class" bindtap="onBindTap">子类</view>
+  </view>
+
+
+
+  <view class="v_container">
+
+    <view class="v_content"> 内容一</view>
+    <view class="v_content1"> 内容二</view>
+    <view class="v_content2"> 内容三</view>
+
+    <view class="v_content"> 内容四</view>
+
+    </view>

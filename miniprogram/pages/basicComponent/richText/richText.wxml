@@ -2,5 +2,5 @@
 <text class="componettitle">{{title}}</text>
 <rich-text space="smsp" nodes="{{nodes}}" bindtap="onTap"/>
 
-<!--parser 解析html-->>
+<!--parser 解析html-->
 <Parser bindimgtap="onTapImage" html="{{html}}"  tag-style="{{tagStyle}}"/>

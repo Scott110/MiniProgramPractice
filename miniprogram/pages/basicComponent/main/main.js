@@ -8,7 +8,9 @@ Page({
       title:'基础组件',
       compont_icon_btn_str:'icon实例',
       compont_progress_btn_str:'progress实例',
-      compont_rich_text_btn_str:'富文本实例'
+      compont_rich_text_btn_str:'富文本实例',
+      compont_view_btn_str:'view实例',
+      compont_moveable_view_str:'可移动view实例'
   },
 
   /**
@@ -95,7 +97,28 @@ Page({
     wx.navigateTo({
       url: '../richText/richText',
     })
-}
+},
+
+
+  /*
+  * 进入view测试页
+  */
+ go2ComponetView:function(){
+  console.log('点击进入View实践页面')
+    wx.navigateTo({
+      url: '../_view/_view',
+    })
+},
+
+/*
+  * 进入可移动 测试页
+  */
+ go2ComponetMoveableView:function(){
+  console.log('点击进入View实践页面')
+    wx.navigateTo({
+      url: '../move_area/move_area'
+    })
+},
 
 })
 

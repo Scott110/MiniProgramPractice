@@ -8,5 +8,10 @@
   <button class="btnStyle" style="width:30%" bind:tap="go2ComponetRichText" type="primary">{{compont_rich_text_btn_str}}</button>
 </view>
 
+<view class="containerStyle1">
+  <button class="btnStyle1" size="mini"  bind:tap="go2ComponetView">{{compont_view_btn_str}}</button>
+  <button class="btnStyle1" size="mini"  bind:tap="go2ComponetMoveableView">{{compont_moveable_view_str}}</button>
+</view>
+
 
 
