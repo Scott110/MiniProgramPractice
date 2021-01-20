@@ -7,7 +7,26 @@ Page({
   data: {
     title:'可移动容器',
     x:0,
-    y:0
+    y:0,
+    slideButton:[
+      {
+      text:"收藏",
+      src:"../../../imags/icon_love.svg"
+    },
+    {
+      text:"喜欢",
+      //修改样式
+      extClass:"start",
+      src:"../../../imags/icon_star.svg",
+      //传递参数对象
+      data:"{a:34,b:56}"
+    },
+    {
+      text:"删除",
+      type:"warn",
+      src:"../../../imags/icon_del.svg"
+    },
+  ]
   },
 
   /**
@@ -84,6 +103,12 @@ Page({
         y:0
       })
     }
+  },
+
+  slideButton(e){
+    console.log("----wx&ui----"+e.detail.data)
   }
+
+  
 
 })

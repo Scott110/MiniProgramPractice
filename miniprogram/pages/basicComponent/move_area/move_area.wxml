@@ -4,26 +4,46 @@
 <view style="position:relative;margin-top:20px;">
   案例一
   <movable-area class="movable_area">
-    <movable-view x="{{x}}" y="{{y}}" inertia  friction="80" friction="1" animation bindchange="onMoveChange" class="movable_view" direction="all">BUTTOM</movable-view>
+    <movable-view x="{{x}}" y="{{y}}" inertia friction="80" friction="1" animation bindchange="onMoveChange"
+      class="movable_view" direction="all">BUTTOM</movable-view>
   </movable-area>
 
   <!--data-xxx 用于设置data参数-->
   <view style="display: flex;flex-direction: row;">
-		<button size="mini" data-kind="0" bindtap="tap"  type="primary">click me to move to (30px, 30px)</button>
-		<button size="mini" data-kind="1" bindtap="tap"  type="primary">click me to move to (0px, 0px)</button>
-</view>
+    <button size="mini" data-kind="0" bindtap="tap" type="primary">go2=>30</button>
+    <button size="mini" data-kind="1" bindtap="tap" type="primary">go2=>0</button>
+  </view>
 </view>
 
 
 <!--自定义可滑动删除View-->
 <view class="list_item">
-<movable-area style="width:750rpx;height:100rpx;">
-  <movable-view style="width:1050rpx;height:100rpx;display:flex;flex-direction:row;" direction="horizontal">
-    <view class="left">这里是插入到组内容1</view>
-    <view class="right">
-      <view class="read">已读</view>
-      <view class="delete">删除</view>
-    </view>
-  </movable-view>
-</movable-area>
+  <movable-area style="width:750rpx;height:100rpx;">
+    <movable-view style="width:1050rpx;height:100rpx;display:flex;flex-direction:row;" direction="horizontal">
+      <view class="left">这里是插入到组内容1</view>
+      <view class="right">
+        <view class="read">已读</view>
+        <view class="delete">删除</view>
+      </view>
+    </movable-view>
+  </movable-area>
 </view>
+
+
+<!-- slideWidth 滑动展示区域宽度-->
+<view>样式二</view>
+<slide-view class="slide" width="750" height="100" slideWidth="300">
+  <view class="left" slot="left">这里是插入到组内容2</view>
+  <view class="right" slot="right">
+    <view class="read">已读</view>
+    <view class="delete">删除</view>
+  </view>
+</slide-view>
+
+<view>样式三</view>
+<mp-slideview ext-class="slideViewClass" icon buttons="{{slideButton}}" bindbuttontap="slideButton">
+  <!--
+  <view class="left">这里是插入到组内容3</view>
+  -->
+  <mp-cell ext-class="_cell" title="左滑删除1" footer="文字说明"></mp-cell>
+  </mp-slideview>

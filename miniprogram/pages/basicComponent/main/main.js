@@ -10,7 +10,8 @@ Page({
       compont_progress_btn_str:'progress实例',
       compont_rich_text_btn_str:'富文本实例',
       compont_view_btn_str:'view实例',
-      compont_moveable_view_str:'可移动view实例'
+      compont_moveable_view_str:'可移动view实例',
+      compont_canvas_str:'view生成海报'
   },
 
   /**
@@ -114,9 +115,20 @@ Page({
   * 进入可移动 测试页
   */
  go2ComponetMoveableView:function(){
-  console.log('点击进入View实践页面')
+  console.log('点击进入moveable页面')
     wx.navigateTo({
       url: '../move_area/move_area'
+    })
+},
+
+
+/*
+  * 进入视图生成海报页
+  */
+ go2_Canvas:function(){
+  console.log('点击进入视图进入海报也页面')
+    wx.navigateTo({
+      url: '../_canvas/_canvas'
     })
 },
 

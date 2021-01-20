@@ -3,8 +3,8 @@
 
 .movable_area{
   background-color: crimson;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
 }
 
 .movable_view{
@@ -55,3 +55,30 @@
   color: #fff;
   width: 150rpx; 
 }
+
+.slide{
+  border-bottom: 1px solid #DEDEDE;
+}
+
+/* 左侧删除3 */
+.slideViewClass{
+  padding: 0;
+}
+
+.start{
+ font-size: small;
+ color: blue;
+ background-color: blue;
+}
+
+
+/*
+* padding 0 否则会出现偏移
+*/
+._cell {
+  padding: 0;
+  background-color: blue;
+
+
+}
+

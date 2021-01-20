@@ -1,0 +1,25 @@
+<!--miniprogram/pages/basicComponent/_canvas/_canvas.wxml-->
+<text class="componettitle">{{title}}</text>
+<view class="container" >
+  <view class="item-box red"></view>
+  <view class="item-box green" >
+    <text class="text">yeah!</text>
+  </view>
+  <view class="item-box blue">
+      <image class="img" src="https://cdn.nlark.com/yuque/0/2020/png/1252071/1590050624644-dd5948db-22fe-48d9-af37-8a2a9f099715.png"></image>
+  </view>
+</view>
+
+
+<view style="position:relative margin-top:30px">渲染wxml</view>
+	<!-- 组件 -->
+  <wxml-to-canvas class="widget"></wxml-to-canvas>
+
+  <view style="position:relative margin-top:30px">导出的图片</view>
+	<!-- 组件 -->
+  <image src="{{src}}" style="width: {{width}}px; height: {{height}}px"></image>
+
+
+<button type="primary" bindtap="renderToCanvas">渲染到canvas</button>
+<button bindtap="extraImage">导出图片</button>
+<button bindtap="onTapSaveBtn">保存图片</button>

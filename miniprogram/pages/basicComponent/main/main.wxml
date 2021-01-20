@@ -11,6 +11,7 @@
 <view class="containerStyle1">
   <button class="btnStyle1" size="mini"  bind:tap="go2ComponetView">{{compont_view_btn_str}}</button>
   <button class="btnStyle1" size="mini"  bind:tap="go2ComponetMoveableView">{{compont_moveable_view_str}}</button>
+  <button class="btnStyle1" size="mini"  bind:tap="go2_Canvas">{{compont_canvas_str}}</button>
 </view>
 
 
