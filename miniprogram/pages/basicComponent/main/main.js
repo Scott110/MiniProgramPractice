@@ -11,7 +11,8 @@ Page({
       compont_rich_text_btn_str:'富文本实例',
       compont_view_btn_str:'view实例',
       compont_moveable_view_str:'可移动view实例',
-      compont_canvas_str:'view生成海报'
+      compont_canvas_str:'view生成海报',
+      compont_scroll_view_str:'进入scroll_view',
   },
 
   /**
@@ -129,6 +130,16 @@ Page({
   console.log('点击进入视图进入海报也页面')
     wx.navigateTo({
       url: '../_canvas/_canvas'
+    })
+},
+
+/*
+  * 进入scrollview页
+  */
+ go2_scrollview:function(){
+  console.log('点击进入scrollview页面')
+    wx.navigateTo({
+      url: '../_scroll_view/_scroll_view'
     })
 },
 

@@ -14,5 +14,9 @@
   <button class="btnStyle1" size="mini"  bind:tap="go2_Canvas">{{compont_canvas_str}}</button>
 </view>
 
+<view class="containerStyle1">
+  <button class="btnStyle" size="mini"  bind:tap="go2_scrollview">{{compont_scroll_view_str}}</button>
+  
+</view>
 
 

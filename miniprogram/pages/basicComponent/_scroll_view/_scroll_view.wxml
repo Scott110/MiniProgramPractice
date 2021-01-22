@@ -1,0 +1,32 @@
+<!--miniprogram/pages/basicComponent/_scroll_view/_scroll_view.wxml-->
+<text class="componettitle">{{title}}</text>
+
+<view style="margin-top:15rpx">纵向滑动</view>
+<scroll-view style="height:300rpx" scroll-y>
+<view class="scroll_item box1">1</view>
+<view class="scroll_item box2">2</view>
+<view class="scroll_item box3">3</view>
+</scroll-view>
+
+
+<view style="margin-top:15rpx">横向滑动</view>
+<scroll-view style="width=100%; white-space:nowrap;" scroll-x scroll-left="{{left}}"
+upper-threshold="50" bindscrolltoupper="viewScrollToUpperEvent"
+> 
+<view class="scroll_item_h box1">1</view>
+<view class="scroll_item_h box2">2</view>
+<view class="scroll_item_h box3">3</view>
+</scroll-view>
+
+<button style="margin-top:15rpx" bindtap="scrolltoPosition">滚动到特定位置</button>
+
+
+<view style="margin-top:15rpx">
+		<scroll-view enable-flex scroll-into-view="{{scrollIntoViewId}}" bindscroll="onScroll" scroll-y scroll-x scroll-with-animation="{{false}}" style="width: 100%;height:300rpx;">
+			<view id="childview{{item}}0" wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9,10]}}" class="scroll-row">{{item}}
+				<view wx:for="{{[0, 1, 2, 3, 4, 5,6,7,8,9]}}" class="scroll-item" id="childview{{item}}{{item2}}" wx:for-item="item2">{{item}}:{{item2}}</view>
+			</view>
+    </scroll-view>
+    </view>
+    
+    <button style="margin-top:15rpx" bindtap="scrollToView">滚动到特定view</button>

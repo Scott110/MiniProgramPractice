@@ -7,7 +7,8 @@
     "pages/basicComponent/richText/richText",
     "pages/basicComponent/_view/_view",
     "pages/basicComponent/move_area/move_area",
-    "pages/basicComponent/_canvas/_canvas"
+    "pages/basicComponent/_canvas/_canvas",
+    "pages/basicComponent/_scroll_view/_scroll_view"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",

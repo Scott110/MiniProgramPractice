@@ -1,0 +1,40 @@
+/* miniprogram/pages/basicComponent/_scroll_view/_scroll_view.wxss */
+
+
+.scroll_item{
+  height: 300rpx;
+}
+
+.box1{
+  background-color: blue;
+}
+
+.box2{
+  background-color:seagreen;
+}
+
+.box3{
+  background-color:red;
+}
+
+
+.scroll_item_h{
+  display: inline-block;
+  height: 300rpx;
+  width: 100%;
+}
+
+
+.scroll-row {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.scroll-item {
+  width: 100rpx;
+  height: 100rpx;
+  margin: 10rpx;
+  background-color: gold;
+  display: block;
+}
