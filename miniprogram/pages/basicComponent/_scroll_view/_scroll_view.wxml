@@ -1,32 +1,144 @@
 <!--miniprogram/pages/basicComponent/_scroll_view/_scroll_view.wxml-->
+
+<wxs module="refresh">
+	var pullingMsg = "下拉刷新"
+
+	//刷新调用的方法
+	var onRefresh = function (e, instance) {
+		//此时进入加载中状态
+		pullingMsg = "刷新中"
+		console.log(pullingMsg)
+		instance.callMethod("setData", {
+			pullMsg: pullingMsg,
+			refresherTrigger: true
+		})
+
+		instance.callMethod("onRefreshComplete", {})
+	}
+
+	//异常状态下拉刷新呗打断
+	var onAbort = function (e, instance) {
+		pullingMsg = "下拉刷新"
+		console.log(pullingMsg)
+	}
+
+	//下拉刷新完成恢复原位
+	var onRestore = function (e, instance) {
+		pullingMsg = "下拉刷新"
+		console.log(pullingMsg)
+	}
+
+	//下拉时触发
+	var onPull = function (e, instance) {
+		var p = Math.min(e.detail.dy / 80, 1)
+		console.log("---------比率-----" + p)
+
+		var refreshIcon=instance.selectComponent('.refresh_mp_icon')
+		refreshIcon.setStyle({
+			opacity: p,
+				transform: "rotate(" + (90 + p * 180) + "deg)"
+
+		})
+
+		var refreshContainer=instance.selectComponent('.refresh_view')
+		refreshContainer.setStyle({
+			opacity: p,
+				transform: "scale(" + p + ")"
+		})
+
+		if (e.detail.dy >= 80) {
+			if (pullingMsg == "下拉刷新") {
+				pullingMsg = "松手刷新"
+				instance.callMethod("setData", {
+					pullMsg: pullingMsg,
+				})
+			}
+		}
+
+
+		console.log(pullingMsg)
+	}
+
+	module.exports = {
+		refresh: onRefresh,
+		abort: onAbort,
+		restore: onRestore,
+		pull: onPull
+
+	}
+
+
+
+</wxs>
+
 <text class="componettitle">{{title}}</text>
 
 <view style="margin-top:15rpx">纵向滑动</view>
 <scroll-view style="height:300rpx" scroll-y>
-<view class="scroll_item box1">1</view>
-<view class="scroll_item box2">2</view>
-<view class="scroll_item box3">3</view>
+	<view class="scroll_item box1">1</view>
+	<view class="scroll_item box2">2</view>
+	<view class="scroll_item box3">3</view>
 </scroll-view>
 
 
 <view style="margin-top:15rpx">横向滑动</view>
-<scroll-view style="width=100%; white-space:nowrap;" scroll-x scroll-left="{{left}}"
-upper-threshold="50" bindscrolltoupper="viewScrollToUpperEvent"
-> 
-<view class="scroll_item_h box1">1</view>
-<view class="scroll_item_h box2">2</view>
-<view class="scroll_item_h box3">3</view>
+<scroll-view style="width=100%; white-space:nowrap;" scroll-x scroll-left="{{left}}" upper-threshold="50"
+	bindscrolltoupper="viewScrollToUpperEvent">
+	<view class="scroll_item_h box1">1</view>
+	<view class="scroll_item_h box2">2</view>
+	<view class="scroll_item_h box3">3</view>
 </scroll-view>
 
 <button style="margin-top:15rpx" bindtap="scrolltoPosition">滚动到特定位置</button>
 
 
 <view style="margin-top:15rpx">
-		<scroll-view enable-flex scroll-into-view="{{scrollIntoViewId}}" bindscroll="onScroll" scroll-y scroll-x scroll-with-animation="{{false}}" style="width: 100%;height:300rpx;">
-			<view id="childview{{item}}0" wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9,10]}}" class="scroll-row">{{item}}
-				<view wx:for="{{[0, 1, 2, 3, 4, 5,6,7,8,9]}}" class="scroll-item" id="childview{{item}}{{item2}}" wx:for-item="item2">{{item}}:{{item2}}</view>
+	<scroll-view enable-flex scroll-into-view="{{scrollIntoViewId}}" bindscroll="onScroll" scroll-y scroll-x
+		scroll-with-animation="{{false}}" style="width: 100%;height:300rpx;">
+		<view id="childview{{item}}0" wx:for="{{[1, 2, 3, 4, 5, 6, 7, 8, 9,10]}}" class="scroll-row">{{item}}
+			<view wx:for="{{[0, 1, 2, 3, 4, 5,6,7,8,9]}}" class="scroll-item" id="childview{{item}}{{item2}}"
+				wx:for-item="item2">{{item}}:{{item2}}</view>
+		</view>
+	</scroll-view>
+</view>
+
+<button style="margin-top:15rpx" bindtap="scrollToView">滚动到特定view</button>
+
+<view style="margin-top:15rpx">自定义下来刷新</view>
+<scroll-view scroll-y class="refresh_sv" bindscroll="onScroll" bindscrolltoupper="scrollTop" scroll-top="{{scrollTop}}"
+	scroll-into-view="{{scrollIntoViewId}}" scroll-with-animation enable-back-to-top enable-flex scroll-anchoring
+	refresher-enabled refresher-threshold="{{80}}" refresher-default-style="none" refresher-background="#FFF"
+	bindrefresherpulling="{{refresh.pull}}" bindrefresherrefresh="{{refresh.refresh}}"
+	bindrefresherrestore="{{refresh.restore}}" bindrefresherabort="{{refresh.abort}}"
+	refresher-triggered="{{refresherTrigger}}">
+	<view slot="refresher" class="refresh_view">
+
+		<view class="refresh_view1">
+
+			<mp-icon class="refresh_mp_icon" id="refreshIcon" type="field" icon="arrow" color="black" size="{{25}}"></mp-icon>
+			<text style="min-width:80px;text-align:left;">{{pullMsg}}</text>
 			</view>
-    </scroll-view>
-    </view>
-    
-    <button style="margin-top:15rpx" bindtap="scrollToView">滚动到特定view</button>
+
+		</view>
+
+		<view wx:for="{{arr}}" id="view{{item+1}}" style="display:flex; height=100px;">
+			<text style="position:relative;top:5px;left:5px;color:black;">{{item+1}}</text>
+			<image src="https://cdn.nlark.com/yuque/0/2020/jpeg/1252071/1586359160786-8d5b7738-3ad3-43e7-bf0a-738c58365645.jpeg"></image>
+			<image src="https://cdn.nlark.com/yuque/0/2020/jpeg/1252071/1586359160786-8d5b7738-3ad3-43e7-bf0a-738c58365645.jpeg"></image>
+			<image src="https://cdn.nlark.com/yuque/0/2020/jpeg/1252071/1586359160786-8d5b7738-3ad3-43e7-bf0a-738c58365645.jpeg"></image>
+			<image src="https://cdn.nlark.com/yuque/0/2020/jpeg/1252071/1586359160786-8d5b7738-3ad3-43e7-bf0a-738c58365645.jpeg"></image>
+			<image src="https://cdn.nlark.com/yuque/0/2020/jpeg/1252071/1586359160786-8d5b7738-3ad3-43e7-bf0a-738c58365645.jpeg"></image>
+			</view>
+
+</scroll-view>
+
+
+<view style="margin-top:15rpx">RecyclerView</view>
+<recycle-view height="200" batch="{{batchSetRecycleData}}" id="recycleId">
+	<recycle_item wx:for="{{recycleList}}" wx:key="id" class="item">
+		<view>
+			{{item.id}}: {{item.name}}
+		</view>
+		</recycle_item>
+
+	</recycle-view>

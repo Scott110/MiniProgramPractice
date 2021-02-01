@@ -38,3 +38,49 @@
   background-color: gold;
   display: block;
 }
+
+
+.refresh_sv{
+  height: 400rpx;
+  width: 100%;
+  overflow-anchor: auto;
+}
+
+
+.refresh_view{
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: cornflowerblue;
+}
+
+
+.refresh_view1{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  background: "#f8f8f8f";
+  justify-content: center;
+  position: absolute;
+  text-align: center;
+  color: "#999";
+}
+
+
+.refresh_mp_icon{
+  transform: rotate(90deg);
+  margin-left: 15px;
+}
+
+
+/* 长列表item */
+/* .item>view，选择.item的直接子元素view */
+.item,
+.item>view {
+  display: flex;
+  align-items: center;
+  height: 100rpx;
+  width: 630rpx;
+  padding-left: 20rpx;
+}
