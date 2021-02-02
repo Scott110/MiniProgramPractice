@@ -13,6 +13,7 @@ Page({
       compont_moveable_view_str:'可移动view实例',
       compont_canvas_str:'view生成海报',
       compont_scroll_view_str:'进入scroll_view',
+      compont_picker_view_str:'进入时间选择器'
   },
 
   /**
@@ -140,6 +141,16 @@ Page({
   console.log('点击进入scrollview页面')
     wx.navigateTo({
       url: '../_scroll_view/_scroll_view'
+    })
+},
+
+/*
+  * 进入选择器页
+  */
+ go2_pickerview:function(){
+  console.log('点击进入选择器页面')
+    wx.navigateTo({
+      url: '../pickerview/_pickerview'
     })
 },
 

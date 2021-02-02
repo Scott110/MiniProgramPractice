@@ -1,0 +1,6 @@
+/* miniprogram/pages/basicComponent/pickerview/_pickerview.wxss */
+
+.normal_picker{
+  background-color: cornsilk;
+  text-align: center;
+}

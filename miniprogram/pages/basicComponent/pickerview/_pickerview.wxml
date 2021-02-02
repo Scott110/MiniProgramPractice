@@ -1,0 +1,12 @@
+<!--miniprogram/pages/basicComponent/pickerview/_pickerview.wxml-->
+<text class="componettitle">{{title}}</text>
+<view style="margin-top:15rpx">普通双向选择器</view>
+
+<!-- value  前面添加 model 就变成双向绑定了-->
+<picker range="{{countrys}}" model:value="{{couuntryIndex}}">
+  <view class="normal_picker">当前选择了{{countrys[couuntryIndex]}}</view>
+  </picker>
+
+
+  <view style="margin-top:15rpx">自定义省市区选择器</view>
+  <region-picker-view bindchange="onRegionChange"></region-picker-view>

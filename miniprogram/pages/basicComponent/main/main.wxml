@@ -16,6 +16,7 @@
 
 <view class="containerStyle1">
   <button class="btnStyle" size="mini"  bind:tap="go2_scrollview">{{compont_scroll_view_str}}</button>
+  <button class="btnStyle" size="mini"  bind:tap="go2_pickerview">{{compont_picker_view_str}}</button>
   
 </view>
 
