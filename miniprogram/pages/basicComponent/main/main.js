@@ -13,7 +13,8 @@ Page({
       compont_moveable_view_str:'可移动view实例',
       compont_canvas_str:'view生成海报',
       compont_scroll_view_str:'进入scroll_view',
-      compont_picker_view_str:'进入时间选择器'
+      compont_picker_view_str:'进入时间选择器',
+      compont_nav_bar_str:'进入自定义导航栏',
   },
 
   /**
@@ -153,6 +154,17 @@ Page({
       url: '../pickerview/_pickerview'
     })
 },
+
+/*
+  * 进入自定义导航
+  */
+ go2_Nav_bar:function(){
+  console.log('点击进入自定义导航页面')
+    wx.navigateTo({
+      url: '../nav_bar/index'
+    })
+},
+
 
 })
 

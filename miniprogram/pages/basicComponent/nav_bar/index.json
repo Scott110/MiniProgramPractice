@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "navigation-bar":"../../customComponent/nagivator_bar/index"
+  },
+
+  "navigationStyle":"custom"
+}
