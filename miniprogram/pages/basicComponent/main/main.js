@@ -15,6 +15,8 @@ Page({
       compont_scroll_view_str:'进入scroll_view',
       compont_picker_view_str:'进入时间选择器',
       compont_nav_bar_str:'进入自定义导航栏',
+      compont_image_str:'Image页面',
+      compont_wb_str:'WebView页面',
   },
 
   /**
@@ -162,6 +164,27 @@ Page({
   console.log('点击进入自定义导航页面')
     wx.navigateTo({
       url: '../nav_bar/index'
+    })
+},
+
+/*
+  * 进入Image 页面
+  */
+ go2_image:function(){
+  console.log('点击进入Image页面')
+    wx.navigateTo({
+      url: '../_image/index'
+    })
+},
+
+
+/*
+  * 进入webView 页面
+  */
+ go2_WebView:function(){
+  console.log('点击进入WebView页面')
+    wx.navigateTo({
+      url: '../webview/index'
     })
 },
 

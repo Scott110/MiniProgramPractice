@@ -20,4 +20,10 @@
   <button class="btnStyle" size="mini"  bind:tap="go2_Nav_bar">{{compont_nav_bar_str}}</button>
 </view>
 
+<view class="containerStyle">
+  <button class="btnStyle" size="mini" bind:tap="go2_image" type="primary">{{compont_image_str}}</button>
+  <button class="btnStyle" size="mini" bind:tap="go2_WebView" type="primary">{{compont_wb_str}}</button>
+
+</view>
+
 

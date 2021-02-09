@@ -1,0 +1,5 @@
+<!--miniprogram/pages/basicComponent/webview/index.wxml-->
+<text class="componettitle">{{title}}</text>
+<button bindgetuserinfo="login" open-type="getUserInfo" type="primary">登录</button>
+
+<button bindopensetting="setting" open-type="openSetting" type="primary">打开授权设置页</button>

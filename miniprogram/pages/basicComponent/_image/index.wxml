@@ -1,0 +1,53 @@
+<!--miniprogram/pages/basicComponent/_image/index.wxml-->
+<text class="componettitle">{{title}}</text>
+
+<image
+ class="normal_img" src="https://qiniu-image.qtshe.com/1557133211411_684.jpg" mode="aspectFit"
+ show-menu-by-longpress
+/>
+
+<!--webp 不设置也自动加载-->
+<image
+ class="normal_img" src="https://ydb-pic1.oss-cn-shanghai.aliyuncs.com/undefined.webp" mode="aspectFit"
+ webp
+/>
+
+<scroll-view class="cardbox">
+  <text class="componettitle">use image</text>
+  <button
+    wx:if="{{true}}"
+		 class="card"
+		 hover-class='none'
+		 wx:for="{{urls}}"
+     wx:key="*this"
+		 bindtap="gotoLive"
+		 style="position: relative;"
+		>
+    <view class="image_card">
+					<image src="{{item}}" lazy-load="{{true}}" class="showpic"  binderror="imgeBindErro"/>
+				</view>
+
+    </button>
+
+
+    <text class="componettitle">mina_lazy-image</text>
+  <button
+		 class="card"
+		 hover-class='none'
+		 wx:for="{{urls}}"
+     wx:key="*this"
+		 bindtap="gotoLive"
+		 style="position: relative;"
+		>
+    <view class="image_card">
+					<mina-lazy-image src="{{item}}" lazy-load="{{true}}" class="showpic"  />
+				</view>
+
+    </button>
+
+</scroll-view>
+
+<!--图片作为背景图通过css 实现-->
+<view
+class="bgContainer1"
+/>
